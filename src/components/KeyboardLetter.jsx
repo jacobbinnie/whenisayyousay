@@ -5,7 +5,7 @@ export default function KeyboardLetter(props) {
     <div
       onClick={(event) => props.handleButtonClick(props.letter)}
       className={
-        props.letter === "DELETE" || props.letter === "ENTER"
+        props.letter === "BACK" || props.letter === "ENTER"
           ? "specialKey"
           : "keyboardLetter"
       }

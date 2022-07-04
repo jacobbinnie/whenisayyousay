@@ -117,7 +117,7 @@ function App() {
   function handleButtonClick(letter) {
     puzzle.answer !== myScore.lastPuzzleCompleted.answer && letter === "ENTER"
       ? checkAnswer()
-      : letter === "DELETE"
+      : letter === "BACK"
       ? setCurrentGuess((prevGuess) => prevGuess.slice(0, -1))
       : setCurrentGuess((prevGuess) => prevGuess + letter);
   }

@@ -18,7 +18,7 @@ function App() {
   });
   const [darkMode, setDarkMode] = useState(false);
 
-  const utcStartTime = new Date("July 2, 2022 00:00:00");
+  const utcStartTime = new Date("July 4, 2022 00:00:00");
 
   useEffect(() => {
     const currentMode = window.localStorage.getItem("darkModeWisus");
@@ -40,6 +40,7 @@ function App() {
     const diff = date2 - date1;
     const dayNumber = Math.floor(diff / days);
     setPuzzle(words[dayNumber]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -86,6 +87,7 @@ function App() {
             })
           )
         );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [guesses]);
 
   function handleDarkMode() {

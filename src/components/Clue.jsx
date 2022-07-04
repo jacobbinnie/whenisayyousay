@@ -71,7 +71,7 @@ export default function Clue(props) {
           }
         ></div>
       </div>
-      <h1 className={props.darkMode && "toggleWhite"}>
+      <h1 className={props.darkMode ? "toggleDark" : "toggleLight"}>
         I SAY <span className="clueSpan">{props.clue}</span>
       </h1>
     </div>

@@ -147,7 +147,7 @@ function App() {
         </div>
         <div className="streakBox">
           <h6 className={darkMode && "streak--dark"}>WIN STREAK</h6>
-          <img src={trophy}></img>
+          <img src={trophy} alt="trophy"></img>
           <h6 className={darkMode ? "streak--dark" : "streak"}>
             {myScore.myStreak}
           </h6>
@@ -159,6 +159,7 @@ function App() {
               className="twitter"
               href="https://twitter.com/jacobbinnie"
               target="_blank"
+              rel="noreferrer"
             >
               @jacobbinnie
             </a>

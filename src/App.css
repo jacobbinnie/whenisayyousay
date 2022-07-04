@@ -1,38 +1,98 @@
-.App {
+.game {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.app {
+  background-color: #f9fafe;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  padding: 50px 50px 150px 50px;
+  overflow: hidden;
+  justify-content: space-between;
+}
+
+.app--dark {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  padding: 50px 50px 150px 50px;
+  overflow: hidden;
+  justify-content: space-between;
+}
+
+.streakBox {
+  width: 100%;
+  text-align: center;
+  height: 0px;
+  margin: 50px 0px 20px 0px;
+  padding: 10px 0px 10px 0px;
+  color: gray;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  gap: 10px;
+}
+
+.streak {
+  font-weight: 800;
+}
+
+.twitter {
+  color: deepskyblue;
+  text-decoration: none;
+  padding-left: 3px;
+}
+
+.footerBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0px 20px 0px;
+}
+
+.darkModeToggleBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10px;
+  background-color: black;
+  color: white;
+  padding: 10px 10px 10px 10px;
+  border-radius: 5px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.streak--dark {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.toggle--darkButton {
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10px;
+  padding: 10px 10px 10px 10px;
+  border-radius: 5px 5px 5px 5px;
+  font-size: 15px;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.toggle--darkButton:hover {
+  background-color: aliceblue;
+}
+
+.darkModeToggleBox:hover {
+  background-color: aliceblue;
+  color: black;
 }

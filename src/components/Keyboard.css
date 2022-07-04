@@ -1,0 +1,64 @@
+.keyboardDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.topKeyboard {
+  display: flex;
+}
+
+.middleKeyboard {
+  display: flex;
+}
+
+.bottomKeyboard {
+  display: flex;
+}
+
+.keyboardLetter {
+  width: 40px;
+  height: 40px;
+  margin: 2px 2px 2px 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0px 16px 40px rgba(112, 144, 176, 0.2);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.keyboardLetter:hover {
+  background-color: aliceblue;
+}
+
+.specialKey {
+  width: 70px;
+  height: 40px;
+  margin: 2px 2px 2px 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0px 16px 40px rgba(112, 144, 176, 0.2);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.specialKey:hover {
+  background-color: aliceblue;
+}
+
+@media screen and (max-width: 640px) {
+  .keyboardLetter {
+    width: 30px;
+    height: 35px;
+  }
+  .specialKey {
+    width: 60px;
+    height: 35px;
+  }
+}

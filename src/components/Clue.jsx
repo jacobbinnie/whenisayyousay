@@ -4,7 +4,9 @@ import "./Clue.css";
 export default function Clue(props) {
   return (
     <div className="clueComponent">
-      <h6 className="newPuzzle">NEW PUZZLE EVERY DAY</h6>
+      <h6 className={props.darkMode ? "newPuzzle--dark" : "newPuzzle"}>
+        NEW PUZZLE EVERY DAY
+      </h6>
       <div className="whenISayYouSay">
         <div className={props.darkMode ? "toggle--dark" : "whenISay"}>
           <h6>WHEN I SAY</h6>

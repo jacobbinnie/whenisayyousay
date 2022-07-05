@@ -5,7 +5,7 @@ import "./Keyboard.css";
 export default function Keyboard(props) {
   const top = ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p"];
   const middle = ["a", "s", "d", "f", "g", "h", "j", "k", "l"];
-  const bottom = ["Back", "z", "x", "c", "v", "b", "n", "m", "Enter"];
+  const bottom = ["Enter", "z", "x", "c", "v", "b", "n", "m", "Back"];
 
   const topBoard = top.map((letter) => (
     <KeyboardLetter

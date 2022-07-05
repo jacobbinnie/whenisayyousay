@@ -27,52 +27,55 @@ export default function Clue(props) {
             : null}
         </h5>
       </div>
-      <div className="guessesBox">
-        <div
-          className={
-            props.guess[0] === "correct"
-              ? "trueStyle"
-              : props.guess[0] === "incorrect"
-              ? "falseStyle"
-              : "guess"
-          }
-        ></div>
-        <div
-          className={
-            props.guess[1] === "correct"
-              ? "trueStyle"
-              : props.guess[1] === "incorrect"
-              ? "falseStyle"
-              : "guess"
-          }
-        ></div>
-        <div
-          className={
-            props.guess[2] === "correct"
-              ? "trueStyle"
-              : props.guess[2] === "incorrect"
-              ? "falseStyle"
-              : "guess"
-          }
-        ></div>
-        <div
-          className={
-            props.guess[3] === "correct"
-              ? "trueStyle"
-              : props.guess[3] === "incorrect"
-              ? "falseStyle"
-              : "guess"
-          }
-        ></div>
-        <div
-          className={
-            props.guess[4] === "correct"
-              ? "trueStyle"
-              : props.guess[4] === "incorrect"
-              ? "falseStyle"
-              : "guess"
-          }
-        ></div>
+      <div className="guessBoxParent">
+        <h6 className="guessesText">GUESSES</h6>
+        <div className="guessesBox">
+          <div
+            className={
+              props.guess[0] === "correct"
+                ? "trueStyle"
+                : props.guess[0] === "incorrect"
+                ? "falseStyle"
+                : "guess"
+            }
+          ></div>
+          <div
+            className={
+              props.guess[1] === "correct"
+                ? "trueStyle"
+                : props.guess[1] === "incorrect"
+                ? "falseStyle"
+                : "guess"
+            }
+          ></div>
+          <div
+            className={
+              props.guess[2] === "correct"
+                ? "trueStyle"
+                : props.guess[2] === "incorrect"
+                ? "falseStyle"
+                : "guess"
+            }
+          ></div>
+          <div
+            className={
+              props.guess[3] === "correct"
+                ? "trueStyle"
+                : props.guess[3] === "incorrect"
+                ? "falseStyle"
+                : "guess"
+            }
+          ></div>
+          <div
+            className={
+              props.guess[4] === "correct"
+                ? "trueStyle"
+                : props.guess[4] === "incorrect"
+                ? "falseStyle"
+                : "guess"
+            }
+          ></div>
+        </div>
       </div>
       <h1 className={props.darkMode ? "toggleDark" : "toggleLight"}>
         I SAY <span className="clueSpan">{props.clue}</span>

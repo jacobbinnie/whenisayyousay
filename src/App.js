@@ -122,11 +122,11 @@ function App() {
       : setCurrentGuess((prevGuess) => prevGuess + letter);
   }
 
-  const gotInOne = `WISUS: ${puzzle.clue} 🟦 ⬜ ⬜ ⬜ ⬜`;
-  const gotInTwo = `WISUS: ${puzzle.clue} 🟥 🟦 ⬜ ⬜ ⬜`;
-  const gotInThree = `WISUS: ${puzzle.clue} 🟥 🟥 🟦 ⬜ ⬜`;
-  const gotInFour = `WISUS: ${puzzle.clue} 🟥 🟥 🟥 🟦 ⬜`;
-  const gotInFive = `WISUS: ${puzzle.clue} 🟥 🟥 🟥 🟥 🟦`;
+  const gotInOne = `WISUS: ${puzzle.clue} 🟦⬜⬜⬜⬜`;
+  const gotInTwo = `WISUS: ${puzzle.clue} 🟥🟦⬜⬜⬜`;
+  const gotInThree = `WISUS: ${puzzle.clue} 🟥🟥🟦⬜⬜`;
+  const gotInFour = `WISUS: ${puzzle.clue} 🟥🟥🟥🟦⬜`;
+  const gotInFive = `WISUS: ${puzzle.clue} 🟥🟥🟥🟥🟦`;
 
   function handleShare() {
     console.log("Sharing");

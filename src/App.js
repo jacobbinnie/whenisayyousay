@@ -129,13 +129,12 @@ function App() {
       Two
     </html>
   );
-
   function handleShare() {
     console.log("Sharing");
     if (navigator.share) {
       navigator
         .share({
-          text: { scoreShare },
+          text: scoreShare,
         })
         .then(() => {
           console.log("Thanks for sharing");

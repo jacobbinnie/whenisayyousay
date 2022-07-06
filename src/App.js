@@ -122,19 +122,27 @@ function App() {
       : setCurrentGuess((prevGuess) => prevGuess + letter);
   }
 
-  const scoreShare = (
-    <html>
-      One
-      <br />
-      Two
-    </html>
-  );
+  const gotInOne = `I got today's WISUS of ${puzzle.clue} in 🟦 ⬜ ⬜ ⬜ ⬜`;
+  const gotInTwo = `I got today's WISUS of ${puzzle.clue} in 🟥 🟦 ⬜ ⬜ ⬜`;
+  const gotInThree = `I got today's WISUS of ${puzzle.clue} in 🟥 🟥 🟦 ⬜ ⬜`;
+  const gotInFour = `I got today's WISUS of ${puzzle.clue} in 🟥 🟥 🟥 🟦 ⬜`;
+  const gotInFive = `I got today's WISUS of ${puzzle.clue} in 🟥 🟥 🟥 🟥 🟦`;
+
   function handleShare() {
     console.log("Sharing");
     if (navigator.share) {
       navigator
         .share({
-          text: scoreShare,
+          text:
+            guesses.length === 1
+              ? gotInOne
+              : guesses.length === 2
+              ? gotInTwo
+              : guesses.length === 3
+              ? gotInThree
+              : guesses.length === 4
+              ? gotInFour
+              : guesses.length === 5 && gotInFive,
         })
         .then(() => {
           console.log("Thanks for sharing");

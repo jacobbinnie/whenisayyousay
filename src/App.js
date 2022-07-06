@@ -122,11 +122,23 @@ function App() {
       : setCurrentGuess((prevGuess) => prevGuess + letter);
   }
 
+  function handleShare(text) {
+    navigator.share({
+      link: "https://whenisayyousay.com",
+      message: text,
+    });
+  }
+
   return (
     <>
       <div className={darkMode ? "app--dark" : "app"}>
         <div className="game">
-          <Clue darkMode={darkMode} guess={guesses} clue={puzzle.clue} />
+          <Clue
+            handleShare={handleShare}
+            darkMode={darkMode}
+            guess={guesses}
+            clue={puzzle.clue}
+          />
           <Board
             style={
               puzzle.answer === myScore.lastPuzzleCompleted.answer &&

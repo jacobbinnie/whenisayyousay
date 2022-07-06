@@ -28,12 +28,7 @@ export default function Clue(props) {
                 ? `YOU GOT IT IN ${props.guess.length} GUESSES 🎉`
                 : `YOU GOT IT IN ${props.guess.length} GUESS 🎉`}
             </h5>
-            <button
-              className="shareButton"
-              onClick={props.handleShare("demo text")}
-            >
-              SHARE
-            </button>
+            <button className="shareButton">SHARE</button>
           </div>
         ) : null
       ) : null}

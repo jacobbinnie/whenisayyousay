@@ -148,7 +148,3 @@
   box-shadow: 0px 16px 40px rgba(112, 144, 176, 0.2);
   cursor: pointer;
 }
-
-.shareButton:hover {
-  background-color: rgb(90, 206, 245);
-}

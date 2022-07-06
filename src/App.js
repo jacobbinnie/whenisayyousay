@@ -122,13 +122,20 @@ function App() {
       : setCurrentGuess((prevGuess) => prevGuess + letter);
   }
 
+  const scoreShare = (
+    <html>
+      One
+      <br />
+      Two
+    </html>
+  );
+
   function handleShare() {
     console.log("Sharing");
     if (navigator.share) {
       navigator
         .share({
-          text: "hello",
-          url: "https://whenisayyousay.com",
+          text: { scoreShare },
         })
         .then(() => {
           console.log("Thanks for sharing");

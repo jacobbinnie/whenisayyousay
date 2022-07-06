@@ -105,6 +105,8 @@
 
 .guessInfo {
   margin-top: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .toggle--dark {
@@ -136,15 +138,22 @@
 }
 
 .shareButton {
-  border: none;
-  margin-top: 5px;
-  margin-bottom: 0px;
-  padding: 7px 15px 7px 15px;
-  border-radius: 5px;
-  font-size: 13px;
-  font-weight: 600;
-  color: white;
-  background-color: deepskyblue;
-  box-shadow: 0px 16px 40px rgba(112, 144, 176, 0.2);
-  cursor: pointer;
+  display: none;
+}
+
+@media screen and (max-width: 640px) {
+  .shareButton {
+    display: block;
+    border: none;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    padding: 7px 15px 7px 15px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 600;
+    color: white;
+    background-color: deepskyblue;
+    box-shadow: 0px 16px 40px rgba(112, 144, 176, 0.2);
+    cursor: pointer;
+  }
 }

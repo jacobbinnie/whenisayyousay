@@ -122,11 +122,44 @@ function App() {
       : setCurrentGuess((prevGuess) => prevGuess + letter);
   }
 
+  const gotInOne = `WISUS: ${puzzle.clue} in 🟦 ⬜ ⬜ ⬜ ⬜`;
+  const gotInTwo = `WISUS: ${puzzle.clue} in 🟥 🟦 ⬜ ⬜ ⬜`;
+  const gotInThree = `WISUS: ${puzzle.clue} in 🟥 🟥 🟦 ⬜ ⬜`;
+  const gotInFour = `WISUS: ${puzzle.clue} in 🟥 🟥 🟥 🟦 ⬜`;
+  const gotInFive = `WISUS: ${puzzle.clue} in 🟥 🟥 🟥 🟥 🟦`;
+
+  function handleShare() {
+    console.log("Sharing");
+    if (navigator.share) {
+      navigator
+        .share({
+          text:
+            guesses.length === 1
+              ? gotInOne
+              : guesses.length === 2
+              ? gotInTwo
+              : guesses.length === 3
+              ? gotInThree
+              : guesses.length === 4
+              ? gotInFour
+              : guesses.length === 5 && gotInFive,
+        })
+        .then(() => {
+          console.log("Thanks for sharing");
+        });
+    }
+  }
+
   return (
     <>
       <div className={darkMode ? "app--dark" : "app"}>
         <div className="game">
-          <Clue darkMode={darkMode} guess={guesses} clue={puzzle.clue} />
+          <Clue
+            handleShare={handleShare}
+            darkMode={darkMode}
+            guess={guesses}
+            clue={puzzle.clue}
+          />
           <Board
             style={
               puzzle.answer === myScore.lastPuzzleCompleted.answer &&

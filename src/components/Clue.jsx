@@ -16,17 +16,24 @@ export default function Clue(props) {
         </div>
       </div>
 
-      <div className="guessInfo">
-        <h5 className={props.darkMode && "guessInfo--dark"}>
-          {props.guess.length > 0
-            ? props.guess.includes("correct")
-              ? props.guess.length > 1
+      {props.guess.length > 0 ? (
+        props.guess.includes("correct") ? (
+          <div className="guessInfo">
+            <h5
+              className={
+                props.darkMode ? "guessInfo--dark" : "guessInfo--light"
+              }
+            >
+              {props.guess.length > 1
                 ? `YOU GOT IT IN ${props.guess.length} GUESSES 🎉`
-                : `YOU GOT IT IN ${props.guess.length} GUESS 🎉`
-              : null
-            : null}
-        </h5>
-      </div>
+                : `YOU GOT IT IN ${props.guess.length} GUESS 🎉`}
+            </h5>
+            <button className="shareButton" onClick={props.handleShare}>
+              SHARE
+            </button>
+          </div>
+        ) : null
+      ) : null}
       <div className="guessBoxParent">
         <h6 className="guessesText">GUESSES</h6>
         <div className="guessesBox">

@@ -27,9 +27,6 @@ function App() {
 
   useEffect(() => {
     setGuesses([]);
-  }, [puzzle]);
-
-  useEffect(() => {
     setCurrentGuess("");
   }, [puzzle]);
 
